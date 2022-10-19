@@ -14,7 +14,6 @@ class P692: Solution {
     }
 
     var sorted = map.sorted { a,b in
-      print("a \(a) b \(b)")
       if a.value == b.value {
         return a > b
       } else {
