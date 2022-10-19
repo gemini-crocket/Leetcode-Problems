@@ -24,4 +24,3 @@ class P566: Solution {
     return reshaped
   }
 }
-
