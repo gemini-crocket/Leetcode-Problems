@@ -8,15 +8,15 @@
 struct P242 {
   class Solution {
     func isAnagram(_ s: String, _ t: String) -> Bool {
-      let charCountS = countCharacter(s)
-      let charCountT = countCharacter(t)
+      let sMap = characterMap(s)
+      let tMap = characterMap(t)
 
       if s.count != t.count {
         return false
       }
 
-      for (index, value) in charCountS {
-        if let count = charCountT[index] {
+      for (index, value) in sMap {
+        if let count = tMap[index] {
           if count == value {
             continue
           }
@@ -26,7 +26,7 @@ struct P242 {
       return true
     }
 
-    func countCharacter(_ s: String) -> [Character:Int] {
+    func characterMap(_ s: String) -> [Character:Int] {
       var map: [Character: Int] = [:]
 
       for character in s {
