@@ -17,7 +17,7 @@ class P383: Solution {
       if mappedMagazine[character] == nil || mappedMagazine[character]! == 0 {
         return false
       }
-      
+
       mappedMagazine[character]! -= 1
     }
 
