@@ -5,29 +5,31 @@
 //  Created by Thomas Heinis on 20/10/2022.
 //
 
-class P74: Solution {
-  func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
-    guard !matrix.isEmpty else { return false }
+struct P74 {
+  class Solution {
+    func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
+      guard !matrix.isEmpty else { return false }
 
-    let numberOfRows = matrix.count
-    let numberOfCols = matrix[0].count
+      let numberOfRows = matrix.count
+      let numberOfCols = matrix[0].count
 
-    var lowerLimit = 0
-    var upperLimit = numberOfRows * numberOfCols - 1
+      var lowerLimit = 0
+      var upperLimit = numberOfRows * numberOfCols - 1
 
-    while lowerLimit <= upperLimit {
-      let middle = lowerLimit + (upperLimit - lowerLimit) / 2
+      while lowerLimit <= upperLimit {
+        let middle = lowerLimit + (upperLimit - lowerLimit) / 2
 
-      let candidate = matrix[middle / numberOfCols][middle % numberOfCols]
-      guard candidate != target else { return true }
+        let candidate = matrix[middle / numberOfCols][middle % numberOfCols]
+        guard candidate != target else { return true }
 
-      if candidate < target {
-        lowerLimit = middle + 1
-      } else {
-        upperLimit = middle - 1
+        if candidate < target {
+          lowerLimit = middle + 1
+        } else {
+          upperLimit = middle - 1
+        }
       }
-    }
 
-    return false
+      return false
+    }
   }
 }

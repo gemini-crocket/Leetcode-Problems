@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E9184B532905448100509C12 /* 206.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9184B522905448100509C12 /* 206.swift */; };
 		E9184B5529054C9900509C12 /* 83.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9184B5429054C9900509C12 /* 83.swift */; };
+		E9184B572905528C00509C12 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9184B562905528C00509C12 /* ListNode.swift */; };
 		E96B866328FFD8C800E9F022 /* 566.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B866228FFD8C800E9F022 /* 566.swift */; };
 		E96B866528FFEA1400E9F022 /* 118.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B866428FFEA1400E9F022 /* 118.swift */; };
 		E96B86672900002300E9F022 /* 692.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B86662900002300E9F022 /* 692.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		E9184B522905448100509C12 /* 206.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 206.swift; sourceTree = "<group>"; };
 		E9184B5429054C9900509C12 /* 83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 83.swift; sourceTree = "<group>"; };
+		E9184B562905528C00509C12 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		E96B866228FFD8C800E9F022 /* 566.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 566.swift; sourceTree = "<group>"; };
 		E96B866428FFEA1400E9F022 /* 118.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 118.swift; sourceTree = "<group>"; };
 		E96B86662900002300E9F022 /* 692.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 692.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				E9F5D7042902E22F00841416 /* 387.swift */,
 				E96B866228FFD8C800E9F022 /* 566.swift */,
 				E96B86662900002300E9F022 /* 692.swift */,
+				E9184B562905528C00509C12 /* ListNode.swift */,
 			);
 			path = "Leetcode-Problems";
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				E9E7B7D32904323D003E1435 /* 203.swift in Sources */,
 				E96B86672900002300E9F022 /* 692.swift in Sources */,
 				E9184B532905448100509C12 /* 206.swift in Sources */,
+				E9184B572905528C00509C12 /* ListNode.swift in Sources */,
 				E9F5D7072902E3DE00841416 /* 383.swift in Sources */,
 				E9E7B7D129042CB8003E1435 /* 141.swift in Sources */,
 				E96B866528FFEA1400E9F022 /* 118.swift in Sources */,
