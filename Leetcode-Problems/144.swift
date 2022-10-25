@@ -20,7 +20,7 @@ struct P144 {
   class Solution {
 
     func preorderTraversal(_ root: TreeNode?) -> [Int] {
-      guard var root else { return [] }
+      guard let root else { return [] }
 
       var stack: [TreeNode] = [root]
       var output: [Int] = []

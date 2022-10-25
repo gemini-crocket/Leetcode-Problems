@@ -20,7 +20,7 @@ struct P145 {
   class Solution {
 
     func postorderTraversal(_ root: TreeNode?) -> [Int] {
-      guard var root else { return [] }
+      guard let root else { return [] }
 
       var stack: [TreeNode] = [root]
       var output: [Int] = []
