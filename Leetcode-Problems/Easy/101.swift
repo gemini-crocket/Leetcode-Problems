@@ -48,11 +48,11 @@ struct P101 {
         return true
       }
 
-      if left == nil || right == nil || left?.val != right?.val {
-        return false
+      if let left, let right, left.val == right.val {
+        return isSymmetric(left.right, right.left) && isSymmetric(left.left, right.right)
       }
 
-      return isSymmetric(left?.right, right?.left) && isSymmetric(left?.left, right?.right)
+      return false
     }
   }
 
