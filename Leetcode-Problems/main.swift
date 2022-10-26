@@ -5,4 +5,4 @@
 //  Created by Thomas Heinis on 18/10/2022.
 //
 
-class Solution { }
+P101.getSolution()
