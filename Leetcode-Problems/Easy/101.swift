@@ -59,6 +59,7 @@ struct P101 {
   static func getSolution() -> Void {
     let nodes = [1,2,2,3,4,4,3]
     let root = BinaryTreeHelper.buildTree(withNodes: nodes)
+    print(root!)
     print(Solution().isSymmetric(root))
   }
 }

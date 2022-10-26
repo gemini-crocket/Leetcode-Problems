@@ -4,10 +4,11 @@
 //
 //  Created by Thomas Heinis on 25/10/2022.
 //
-// Definition for a binary tree node.
-// Provided by Leetcode
+//  Definition for a binary tree node.
+//  Provided by Leetcode
+//  Additionnal functions by Tianyu Wang
 
-public class TreeNode {
+public class TreeNode: BinaryTreeNodePrintable, CustomStringConvertible {
   public var val: Int
   public var left: TreeNode?
   public var right: TreeNode?
@@ -28,5 +29,25 @@ public class TreeNode {
     self.val = val
     self.left = left
     self.right = right
+  }
+
+  //MARK: - BinaryTreeNodePrintable Protocol
+
+  func leftSubTree() -> BinaryTreeNodePrintable? {
+    return left
+  }
+
+  func rightSubTree() -> BinaryTreeNodePrintable? {
+    return right
+  }
+
+  func presentation() -> String {
+    return "\(val)"
+  }
+
+  //MARK: - CustomStringConvertible Protocol {
+
+  public var description: String {
+    return BinaryTreeHelper.getStructureDescription(forNode: self)
   }
 }
