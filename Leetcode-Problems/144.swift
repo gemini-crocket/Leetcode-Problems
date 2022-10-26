@@ -5,7 +5,7 @@
 //  Category  :  Stack, Tree, Depth-First Search, Binary Tree
 //
 //  Created by Thomas Heinis on 25/10/2022.
-//  Github    :  https://github.com/gemini-crocket
+//  Github    :  https://github.com/thomas-heinis
 //  Linkedin  :  https://linkedin.com/in/thomas-heinis
 //  Mail      :  mailto:thomas.heinis@ik.me
 

@@ -5,7 +5,7 @@
 //  Category  :  Stack, Tree, Depth-First Search, Binary Tree
 //
 //  Created by Thomas Heinis on 25/10/2022.
-//  Github    :  https://github.com/gemini-crocket
+//  Github    :  https://github.com/thomas-heinis
 //  Linkedin  :  https://linkedin.com/in/thomas-heinis
 //  Mail      :  mailto:thomas.heinis@ik.me
 
@@ -21,7 +21,7 @@ struct P94 {
 
     func inorderTraversal(_ root: TreeNode?) -> [Int] {
       var node: TreeNode? = root
-      var result: [Int] = []
+      var output: [Int] = []
       var stack: [TreeNode?] = []
 
       while !stack.isEmpty || node != nil {
@@ -30,11 +30,11 @@ struct P94 {
           node = node?.left
         } else {
           node = stack.removeLast()
-          result.append(node!.val)
+          output.append(node!.val)
           node = node?.right
         }
       }
-      return result
+      return output
     }
 
     static func getSolution() -> Void {
