@@ -11,7 +11,7 @@
 //  Mail      :  mailto:thomas.heinis@ik.me
 //
 
-/**
+/*
  *
  * Given the root of a binary tree, check whether it is a mirror of itself
  * (i.e., symmetric around its center).
@@ -23,7 +23,7 @@
  *    / \
  *   2   2
  *  / \ / \
- * 3     4  4    3
+ * 3  4 4  3
  *
  * is symmetric.
  * But the following is not:
