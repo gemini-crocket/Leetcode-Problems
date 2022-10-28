@@ -12,10 +12,10 @@
 
 struct P {
 
-    class Solution {
-    }
+  class Solution {
+  }
 
-    static func getSolution() -> Void {
-        print(Solution())
-    }
+  static func getSolution() -> Void {
+    print(Solution())
+  }
 }
