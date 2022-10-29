@@ -2,7 +2,7 @@
 
 <img align="right" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg">
 
-[LeetCode](https://leetcode.com/) is a website containing many **algorithm questions**. Most of them are real interview questions of **Adobe, Amazon, Apple, Facebook, Google, LinkedIn**, etc. This repository shows my solutions in Swift with the code style strictly following the [Kodeco Swift Style Guide](https://github.com/kodecocodes/swift-style-guide).
+[LeetCode](https://leetcode.com/) is a website containing many **algorithm questions**. Most of them are real interview questions of **Adobe, Amazon, Apple, Facebook, Google, LinkedIn, Microsoft,** etc. This repository shows my solutions in Swift with the code style strictly following the [Kodeco Swift Style Guide](https://github.com/kodecocodes/swift-style-guide).
 
 Please feel free to reference and **star** to support this repository.
 
