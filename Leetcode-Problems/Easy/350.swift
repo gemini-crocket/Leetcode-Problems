@@ -3,9 +3,12 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 18/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P350 {
+enum P350 {
   class Solution {
     func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
       var map: [Int: Int] = [:]

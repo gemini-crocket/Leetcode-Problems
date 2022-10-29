@@ -3,12 +3,15 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 18/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P121 {
+enum P121 {
   class Solution {
     func maxProfit(_ prices: [Int]) -> Int {
-      if (prices.isEmpty) {
+      if prices.isEmpty {
         return 0
       }
 

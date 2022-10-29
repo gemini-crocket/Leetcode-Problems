@@ -3,12 +3,12 @@
 //  leetcode-swift
 //
 //  Created by Tianyu Wang on 16/6/29.
-//  Github   :  http://github.com/wty21cn
+//  GitHub   :  http://github.com/wty21cn
 //  Website  :  http://wty.im
-//  Linkedin :  https://www.linkedin.com/in/wty21cn
-//  Mail     :  mailto:wty21cn@gmail.com
+//  LinkedIn :  https://www.linkedin.com/in/wty21cn
+//  E-mail   :  mailto:wty21cn@gmail.com
 
-//MARK: - Helper Protocol
+// MARK: - Helper Protocol
 protocol BinaryTreeNodePrintable {
   func leftSubTree() -> BinaryTreeNodePrintable?
   func rightSubTree() -> BinaryTreeNodePrintable?

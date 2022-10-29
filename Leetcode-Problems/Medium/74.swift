@@ -5,7 +5,7 @@
 //  Created by Thomas Heinis on 20/10/2022.
 //
 
-struct P74 {
+enum P74 {
   class Solution {
     func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
       guard !matrix.isEmpty else { return false }

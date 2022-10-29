@@ -5,7 +5,7 @@
 //  Created by Thomas Heinis on 20/10/2022.
 //
 
-struct P36 {
+enum P36 {
   class Solution {
     func isValidSudoku(_ board: [[Character]]) -> Bool {
       for i in 0 ..< 9 {
@@ -26,7 +26,7 @@ struct P36 {
         let rowRange = blockFirstRow ..< blockFirstRow + 3
         let colRange = blockFirstCol ..< blockFirstCol + 3
         let filteredBlock = board[rowRange]
-          .flatMap { $0[colRange]}
+          .flatMap { $0[colRange] }
           .filter { $0 != "." }
 
         if filteredBlock.count != Set(filteredBlock).count {

@@ -10,7 +10,7 @@
 //  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-enum P {
+enum PXXX {
   class Solution {
   }
 

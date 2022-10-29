@@ -3,9 +3,12 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 21/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P383 {
+enum P383 {
   class Solution {
     func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
       var mappedMagazine: [Character: Int] = [:]

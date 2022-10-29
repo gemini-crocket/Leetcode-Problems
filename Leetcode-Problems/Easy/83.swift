@@ -3,9 +3,12 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 23/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P83 {
+enum P83 {
   class Solution {
     func deleteDuplicates(_ head: ListNode?) -> ListNode? {
       var current: ListNode? = head

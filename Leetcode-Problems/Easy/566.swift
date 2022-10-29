@@ -3,9 +3,12 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 19/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P566 {
+enum P566 {
   class Solution {
     func matrixReshape(_ mat: [[Int]], _ rows: Int, _ cols: Int) -> [[Int]] {
       let initialRows = mat.count

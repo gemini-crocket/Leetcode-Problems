@@ -3,12 +3,15 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 22/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P141 {
+enum P141 {
   class Solution {
     func hasCycle(_ head: ListNode?) -> Bool {
-      if (head == nil) {
+      if head == nil {
         return false
       }
 

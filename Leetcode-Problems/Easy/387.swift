@@ -3,9 +3,12 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 21/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P387 {
+enum P387 {
   class Solution {
     func firstUniqChar(_ string: String) -> Int {
       var map: [Character: [Int]] = [:]

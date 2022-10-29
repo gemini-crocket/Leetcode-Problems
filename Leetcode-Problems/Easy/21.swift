@@ -3,9 +3,12 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 22/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P21 {
+enum P21 {
   class Solution {
     func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
       if list1 == nil {
@@ -16,15 +19,14 @@ struct P21 {
         return list1
       }
 
-      var result: ListNode? = nil
+      var result: ListNode?
 
       if list1!.val <= list2!.val {
         result = list1
-        result!.next = mergeTwoLists(list1!.next,list2)
-
+        result!.next = mergeTwoLists(list1!.next, list2)
       } else {
         result = list2
-        result!.next = mergeTwoLists(list1,list2!.next)
+        result!.next = mergeTwoLists(list1, list2!.next)
       }
 
       return result

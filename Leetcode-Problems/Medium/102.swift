@@ -11,30 +11,29 @@
 //
 
 /*
- *
- * Given the root of a binary tree, return the level order traversal of its nodes' values.
- * (ie, from left to right, level by level).
- *
- * For example:
- * Given binary tree [3,9,20,nil,nil,15,7],
- *
- *     3
- *    / \
- *   9  20
- *     /  \
- *    15   7
- *
- * return its level order traversal as:
- *
- * [
- *  [3],
- *  [9,20],
- *  [15,7]
- * ]
- */
+  *
+  * Given the root of a binary tree, return the level order traversal of its nodes' values.
+  * (ie, from left to right, level by level).
+  *
+  * For example:
+  * Given binary tree [3,9,20,nil,nil,15,7],
+  *
+  *     3
+  *    / \
+  *   9  20
+  *     /  \
+  *    15   7
+  *
+  * return its level order traversal as:
+  *
+  * [
+  *  [3],
+  *  [9,20],
+  *  [15,7]
+  * ]
+  */
 
-struct P102 {
-
+enum P102 {
   class Solution {
     func levelOrder(_ root: TreeNode?) -> [[Int]] {
       guard let root else { return [] }
@@ -67,8 +66,8 @@ struct P102 {
     }
   }
 
-  static func getSolution() -> Void {
-    let nodes = [3,9,20,nil,nil,15,7]
+  static func getSolution() {
+    let nodes = [3, 9, 20, nil, nil, 15, 7]
     let root = BinaryTreeHelper.buildTree(withNodes: nodes)
     print(root ?? "")
     print(Solution().levelOrder(root))

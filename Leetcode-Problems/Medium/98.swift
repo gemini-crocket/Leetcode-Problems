@@ -40,22 +40,25 @@ enum P98 {
       guard let node else { return true }
 
       if let low, node.val <= low {
-          return false
+        return false
       }
 
       if let high, node.val >= high {
-          return false
+        return false
       }
 
       return isValidBST(node.left, low, node.val) && isValidBST(node.right, node.val, high)
     }
   }
 
-  static func getSolution() -> Void {
-    let nodes = [2,1,3]
-//    let nodes = [5,1,4,nil,nil,3,6]
+  static func getSolution() {
+    let nodes = [5, 1, 4, nil, nil, 3, 6]
     let tree = BinaryTreeHelper.buildTree(withNodes: nodes)
-    print(tree!)
+
     print(Solution().isValidBST(tree))
+
+    if let tree {
+      print(tree)
+    }
   }
 }

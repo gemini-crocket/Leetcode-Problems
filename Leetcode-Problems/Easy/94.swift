@@ -5,20 +5,18 @@
 //  Category  :  Stack, Tree, Depth-First Search, Binary Tree
 //
 //  Created by Thomas Heinis on 25/10/2022.
-//  Github    :  https://github.com/thomas-heinis
-//  Linkedin  :  https://linkedin.com/in/thomas-heinis
-//  Mail      :  mailto:thomas.heinis@ik.me
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
+//
 
 /*
- *
- * Given the root of a binary tree, return the inorder traversal of its nodes' values.
- *
- */
+  * Given the root of a binary tree, return the inorder traversal of its nodes' values.
+  *
+  */
 
-struct P94 {
-
+enum P94 {
   class Solution {
-
     func inorderTraversal(_ root: TreeNode?) -> [Int] {
       var node: TreeNode? = root
       var output: [Int] = []
@@ -37,7 +35,7 @@ struct P94 {
       return output
     }
 
-    static func getSolution() -> Void {
+    static func getSolution() {
     }
   }
 }

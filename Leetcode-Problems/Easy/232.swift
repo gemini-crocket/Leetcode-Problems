@@ -5,33 +5,33 @@
 //  Category  :  Design, Queue, Stack
 //
 //  Created by Thomas Heinis on 24/10/2022.
-//  Github    :  https://github.com/thomas-heinis
-//  Linkedin  :  https://linkedin.com/in/thomas-heinis
-//  Mail      :  mailto:thomas.heinis@ik.me
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
+//
 
 /*
- *
- * Implement a first in first out (FIFO) queue using only two stacks.
- * The implemented queue should support all the functions of a normal queue.
- *
- * push(x) - Push element x to the back of queue.
- * pop() - Removes the element from in front of queue.
- * peek() - Get the front element.
- * empty() - Return whether the queue is empty.
- *
- * Notes:
- *
- * You must use only standard operations of a stack, which means only "push to top",
- * "peek/pop from top", "size", and "is empty" operations are valid.
- *
- * Depending on your language, stack may not be supported natively. You may simulate a
- * stack by using a list or deque (double-ended queue), as long as you use only
- * standard operations of a stack.
- *
- */
+  *
+  * Implement a first in first out (FIFO) queue using only two stacks.
+  * The implemented queue should support all the functions of a normal queue.
+  *
+  * push(x) - Push element x to the back of queue.
+  * pop() - Removes the element from in front of queue.
+  * peek() - Get the front element.
+  * empty() - Return whether the queue is empty.
+  *
+  * Notes:
+  *
+  * You must use only standard operations of a stack, which means only "push to top",
+  * "peek/pop from top", "size", and "is empty" operations are valid.
+  *
+  * Depending on your language, stack may not be supported natively. You may simulate a
+  * stack by using a list or deque (double-ended queue), as long as you use only
+  * standard operations of a stack.
+  *
+  */
 
-struct P232 {
-
+enum P232 {
   class MyQueue {
     private var stack1: [Int]
     private var stack2: [Int]
@@ -70,7 +70,7 @@ struct P232 {
       return stack1.isEmpty && stack2.isEmpty
     }
 
-    static func getSolution() -> Void {
+    static func getSolution() {
     }
   }
 }

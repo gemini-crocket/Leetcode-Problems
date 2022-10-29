@@ -34,7 +34,7 @@
  *
  */
 
-struct P235 {
+enum P235 {
   class Solution {
     func lowestCommonAncestor(_ node: TreeNode?, _ pNode: TreeNode?, _ qNode: TreeNode?) -> TreeNode? {
       guard
@@ -44,14 +44,16 @@ struct P235 {
       else {
         return nil
       }
-      var cur: TreeNode? = node
-      while cur != nil {
-        if cur?.val ?? 0 < pNode.val, cur?.val ?? 0 < qNode.val {
-          cur = cur?.right
-        } else if cur?.val ?? 0 > pNode.val, cur?.val ?? 0 > qNode.val {
-          cur = cur?.left
+
+      var currentNode: TreeNode? = node
+
+      while currentNode != nil {
+        if currentNode?.val ?? 0 < pNode.val, currentNode?.val ?? 0 < qNode.val {
+          currentNode = currentNode?.right
+        } else if currentNode?.val ?? 0 > pNode.val, currentNode?.val ?? 0 > qNode.val {
+          currentNode = currentNode?.left
         } else {
-          return cur
+          return currentNode
         }
       }
       return nil
@@ -64,9 +66,10 @@ struct P235 {
     let qNode = TreeNode(4)
     let tree = BinaryTreeHelper.buildTree(withNodes: nodes)
 
+    print(Solution().lowestCommonAncestor(tree, pNode, qNode) ?? "")
+
     if let tree {
       print(tree)
-      print(Solution().lowestCommonAncestor(tree, pNode, qNode) ?? "")
     }
   }
 }

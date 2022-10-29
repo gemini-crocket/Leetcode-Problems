@@ -6,9 +6,9 @@
 
 //
 //  Created by Thomas Heinis on 26/10/2022.
-//  Github    :  https://github.com/thomas-heinis
-//  Linkedin  :  https://linkedin.com/in/thomas-heinis
-//  Mail      :  mailto:thomas.heinis@ik.me
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
 /*
@@ -35,7 +35,7 @@
   *     3   3
   */
 
-struct P101 {
+enum P101 {
   class Solution {
     func isSymmetric(_ root: TreeNode?) -> Bool {
       guard let root else { return true }

@@ -3,12 +3,15 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 19/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P692 {
+enum P692 {
   class Solution {
     func topKFrequent(_ words: [String], _ kFreq: Int) -> [String] {
-      var map: [String:Int] = [:]
+      var map: [String: Int] = [:]
 
       for word in words {
         map[word] = map[word, default: 0] + 1

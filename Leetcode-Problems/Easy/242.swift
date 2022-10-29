@@ -3,9 +3,12 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on 21/10/2022.
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P242 {
+enum P242 {
   class Solution {
     func isAnagram(_ string1: String, _ string2: String) -> Bool {
       let sMap = characterMap(string1)
@@ -26,7 +29,7 @@ struct P242 {
       return true
     }
 
-    func characterMap(_ string: String) -> [Character:Int] {
+    func characterMap(_ string: String) -> [Character: Int] {
       var map: [Character: Int] = [:]
 
       for character in string {

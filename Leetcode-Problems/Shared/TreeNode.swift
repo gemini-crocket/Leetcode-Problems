@@ -31,7 +31,7 @@ public class TreeNode: BinaryTreeNodePrintable, CustomStringConvertible {
     self.right = right
   }
 
-  //MARK: - BinaryTreeNodePrintable Protocol
+  // MARK: - BinaryTreeNodePrintable Protocol
 
   func leftSubTree() -> BinaryTreeNodePrintable? {
     return left
@@ -45,7 +45,7 @@ public class TreeNode: BinaryTreeNodePrintable, CustomStringConvertible {
     return "\(val)"
   }
 
-  //MARK: - CustomStringConvertible Protocol {
+  // MARK: - CustomStringConvertible Protocol {
 
   public var description: String {
     return BinaryTreeHelper.getStructureDescription(forNode: self)

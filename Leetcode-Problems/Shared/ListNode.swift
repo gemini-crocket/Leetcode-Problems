@@ -26,7 +26,7 @@ public class ListNode: ListNodePrintable, CustomStringConvertible {
     self.next = next
   }
 
-  //MARK: - ListNodePrintable Protocol
+  // MARK: - ListNodePrintable Protocol
 
   func presentation() -> String {
     return "\(val)"
@@ -36,7 +36,7 @@ public class ListNode: ListNodePrintable, CustomStringConvertible {
     return next
   }
 
-  //MARK: - CustomStringConvertible Protocol {
+  // MARK: - CustomStringConvertible Protocol {
 
   public var description: String {
     return LinkedListHelper.getStructureDescription(forNode: self)
