@@ -15,13 +15,13 @@ protocol BinaryTreeNodePrintable {
   func presentation() -> String
 }
 
-class BinaryTreeHelper {
+enum BinaryTreeHelper {
   static func buildTree(withNodes nodes: [Int?]) -> TreeNode? {
     let root = buildTree(withNodes: nodes, index: nodes.startIndex)
     return root
   }
 
-  fileprivate static func buildTree(withNodes nodes: [Int?], index: Int) -> TreeNode? {
+  private static func buildTree(withNodes nodes: [Int?], index: Int) -> TreeNode? {
     if index < nodes.endIndex {
       if let nodeValue = nodes[index] {
         let node = TreeNode(nodeValue)
@@ -38,24 +38,23 @@ class BinaryTreeHelper {
 }
 
 extension BinaryTreeHelper {
-
-  fileprivate static let indentStrVertical    = " │      "
-  fileprivate static let indentStrBlank       = "        "
-  fileprivate static let indentStrLine        = "───── "
-  fileprivate static let indentStrRightChild  = " ┌"
-  fileprivate static let indentStrLeftChild   = " └"
+  private static let indentStrVertical    = " │      "
+  private static let indentStrBlank       = "        "
+  private static let indentStrLine        = "───── "
+  private static let indentStrRightChild  = " ┌"
+  private static let indentStrLeftChild   = " └"
 
   static func getStructureDescription(forNode node: BinaryTreeNodePrintable?) -> String {
     var description = "\n"
     if let root = node {
-      if let rc = root.rightSubTree() {
-        description += getSubtreeStructureDescription(rc, isRightSubtree: true, indent: "")
+      if let rightSubTree = root.rightSubTree() {
+        description += getSubtreeStructureDescription(rightSubTree, isRightSubtree: true, indent: "")
       }
 
       description += root.presentation() + "\n"
 
-      if let lc = root.leftSubTree() {
-        description += getSubtreeStructureDescription(lc, isRightSubtree: false, indent: "")
+      if let leftSubTree = root.leftSubTree() {
+        description += getSubtreeStructureDescription(leftSubTree, isRightSubtree: false, indent: "")
       }
     } else {
       description = "nil"
@@ -63,23 +62,22 @@ extension BinaryTreeHelper {
     return description
   }
 
-  fileprivate static func getSubtreeStructureDescription(_ subtree: BinaryTreeNodePrintable, isRightSubtree: Bool, indent: String) -> String {
+  private static func getSubtreeStructureDescription(_ subtree: BinaryTreeNodePrintable, isRightSubtree: Bool, indent: String) -> String {
     var description = ""
 
     let leftSubtreeIndent = indent + (isRightSubtree ? indentStrVertical : indentStrBlank)
     let rightSubTreeIndent = indent + (isRightSubtree ? indentStrBlank : indentStrVertical)
     let fullIndent = indent + (isRightSubtree ? indentStrRightChild : indentStrLeftChild) + indentStrLine
 
-    if let rc = subtree.rightSubTree() {
-      description += getSubtreeStructureDescription(rc, isRightSubtree: true, indent: rightSubTreeIndent)
+    if let rightSubTree = subtree.rightSubTree() {
+      description += getSubtreeStructureDescription(rightSubTree, isRightSubtree: true, indent: rightSubTreeIndent)
     }
 
     description += fullIndent + subtree.presentation() + "\n"
 
-    if let lc = subtree.leftSubTree() {
-      description += getSubtreeStructureDescription(lc, isRightSubtree: false, indent: leftSubtreeIndent)
+    if let leftSubTree = subtree.leftSubTree() {
+      description += getSubtreeStructureDescription(leftSubTree, isRightSubtree: false, indent: leftSubtreeIndent)
     }
     return description
   }
-
 }

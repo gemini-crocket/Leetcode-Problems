@@ -9,47 +9,45 @@
 //  E-mail   :  mailto:wty21cn@gmail.com
 
 protocol ListNodePrintable {
-    func presentation() -> String
-    func successor() -> ListNodePrintable?
+  func presentation() -> String
+  func successor() -> ListNodePrintable?
 }
 
-
-class LinkedListHelper {
-
-    static func buildLinkedList(withNodes nodes: [Int]) -> ListNode? {
-        var root: ListNode?
-        var ln: ListNode?
-        for node in nodes {
-            if ln != nil {
-                ln!.next = ListNode(node)
-                ln = ln!.next
-            } else {
-                ln = ListNode(node)
-                root = ln
-            }
-        }
-        return root
+enum LinkedListHelper {
+  static func buildLinkedList(withNodes nodes: [Int]) -> ListNode? {
+    var root: ListNode?
+    var listNode: ListNode?
+    for node in nodes {
+      if listNode != nil {
+        listNode!.next = ListNode(node)
+        listNode = listNode!.next
+      } else {
+        listNode = ListNode(node)
+        root = listNode
+      }
     }
+    return root
+  }
 }
 
 extension LinkedListHelper {
-    fileprivate static let indent = "-->"
+  private static let indent = "-->"
 
-    static func getStructureDescription(forNode node: ListNodePrintable?) -> String {
-        var description = ""
-        if var node = node {
-            while true  {
-                description += node.presentation()
-                if let successor = node.successor() {
-                    description += indent
-                    node = successor
-                } else {
-                    break
-                }
-            }
+  static func getStructureDescription(forNode node: ListNodePrintable?) -> String {
+    var description = ""
+    if var node = node {
+      while true {
+        description += node.presentation()
+        if let successor = node.successor() {
+          description += indent
+          node = successor
         } else {
-            description = "nil"
+          break
         }
-        return description
+      }
+    } else {
+      description = "nil"
     }
+    return description
+  }
 }
