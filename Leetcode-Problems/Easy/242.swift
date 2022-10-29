@@ -7,11 +7,11 @@
 
 struct P242 {
   class Solution {
-    func isAnagram(_ s: String, _ t: String) -> Bool {
-      let sMap = characterMap(s)
-      let tMap = characterMap(t)
+    func isAnagram(_ string1: String, _ string2: String) -> Bool {
+      let sMap = characterMap(string1)
+      let tMap = characterMap(string2)
 
-      if s.count != t.count {
+      if string1.count != string2.count {
         return false
       }
 
@@ -26,10 +26,10 @@ struct P242 {
       return true
     }
 
-    func characterMap(_ s: String) -> [Character:Int] {
+    func characterMap(_ string: String) -> [Character:Int] {
       var map: [Character: Int] = [:]
 
-      for character in s {
+      for character in string {
         map[character] = map[character, default: 0] + 1
       }
 
@@ -37,7 +37,7 @@ struct P242 {
     }
   }
 
-  static func getSolution() -> Void {
+  static func getSolution() {
     print(Solution().isAnagram("1233214", "3211233"))
   }
 }

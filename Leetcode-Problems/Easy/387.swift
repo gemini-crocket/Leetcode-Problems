@@ -7,10 +7,10 @@
 
 struct P387 {
   class Solution {
-    func firstUniqChar(_ s: String) -> Int {
+    func firstUniqChar(_ string: String) -> Int {
       var map: [Character: [Int]] = [:]
 
-      for (index, element) in s.enumerated() {
+      for (index, element) in string.enumerated() {
         map[element, default: []].append(index)
       }
 

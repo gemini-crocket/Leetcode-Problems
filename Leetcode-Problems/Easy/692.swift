@@ -7,25 +7,25 @@
 
 struct P692 {
   class Solution {
-    func topKFrequent(_ words: [String], _ k: Int) -> [String] {
+    func topKFrequent(_ words: [String], _ kFreq: Int) -> [String] {
       var map: [String:Int] = [:]
 
       for word in words {
         map[word] = map[word, default: 0] + 1
       }
 
-      var sorted = map.sorted { a,b in
-        if a.value == b.value {
-          return a > b
+      var sorted = map.sorted { aWord, bWord in
+        if aWord.value == bWord.value {
+          return aWord > bWord
         } else {
-          return a.value < b.value
+          return aWord.value < bWord.value
         }
       }
 
       var result: [String] = []
       sorted = sorted.reversed()
 
-      for i in 0 ..< k {
+      for i in 0 ..< kFreq {
         let (key, _) = sorted[i]
         result.append(key)
       }

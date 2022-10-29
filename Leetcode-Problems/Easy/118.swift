@@ -19,8 +19,8 @@ struct P118 {
         row[0] = 1
         row[i] = 1
 
-        for j in 1 ..< i {
-          row[j] = result[i-1][j-1] + result[i-1][j]
+        for index in 1 ..< i {
+          row[index] = result[i-1][index-1] + result[i-1][index]
         }
 
         result.append(row)

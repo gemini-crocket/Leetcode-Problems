@@ -40,9 +40,9 @@ extension LinkedListHelper {
         if var node = node {
             while true  {
                 description += node.presentation()
-                if let n = node.successor() {
+                if let successor = node.successor() {
                     description += indent
-                    node = n
+                    node = successor
                 } else {
                     break
                 }

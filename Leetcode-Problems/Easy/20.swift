@@ -23,11 +23,11 @@ struct P20 {
 
   class Solution {
 
-    func isValid(_ s: String) -> Bool {
+    func isValid(_ string: String) -> Bool {
       var stack: [Character] = []
       let map: [Character: Character] = ["(":")", "[":"]", "{":"}"]
 
-      for parenthese in s {
+      for parenthese in string {
         if map.keys.contains(parenthese) {
           stack.append(parenthese)
         } else if stack.isEmpty || parenthese != map[stack.popLast()!] {

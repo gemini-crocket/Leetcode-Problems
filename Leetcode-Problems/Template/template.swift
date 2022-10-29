@@ -5,17 +5,16 @@
 //  Category  :
 //
 //  Created by Thomas Heinis on .
-//  Github    :  https://github.com/thomas-heinis
-//  Linkedin  :  https://linkedin.com/in/thomas-heinis
-//  Mail      :  mailto:thomas.heinis@ik.me
+//  GitHub    :  https://github.com/hoseiocean
+//  LinkedIn  :  https://linkedin.com/in/hoseiocean
+//  E-mail    :  mailto:thomas.heinis@ik.me
 //
 
-struct P {
-
+enum P {
   class Solution {
   }
 
-  static func getSolution() -> Void {
+  static func getSolution() {
     print(Solution())
   }
 }

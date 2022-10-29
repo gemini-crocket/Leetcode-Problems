@@ -45,7 +45,7 @@ struct P701 {
     func insertIntoBST(_ root: TreeNode?, _ val: Int) -> TreeNode? {
       guard let root else { return TreeNode(val) }
 
-      if (val > root.val) {
+      if val > root.val {
         root.right = insertIntoBST(root.right, val)
       } else {
         root.left = insertIntoBST(root.left, val)

@@ -12,31 +12,30 @@
 //
 
 /*
- *
- * Given the root of a binary tree, check whether it is a mirror of itself
- * (i.e., symmetric around its center).
- *
- * For example:
- * Given binary tree [1,2,2,3,4,4,3],
- *
- *     1
- *    / \
- *   2   2
- *  / \ / \
- * 3  4 4  3
- *
- * is symmetric.
- * But the following is not:
- *
- *     1
- *    / \
- *   2   2
- *    \   \
- *     3   3
- */
+  *
+  * Given the root of a binary tree, check whether it is a mirror of itself
+  * (i.e., symmetric around its center).
+  *
+  * For example:
+  * Given binary tree [1,2,2,3,4,4,3],
+  *
+  *     1
+  *    / \
+  *   2   2
+  *  / \ / \
+  * 3  4 4  3
+  *
+  * is symmetric.
+  * But the following is not:
+  *
+  *     1
+  *    / \
+  *   2   2
+  *    \   \
+  *     3   3
+  */
 
 struct P101 {
-
   class Solution {
     func isSymmetric(_ root: TreeNode?) -> Bool {
       guard let root else { return true }
@@ -56,10 +55,10 @@ struct P101 {
     }
   }
 
-  static func getSolution() -> Void {
-    let nodes = [1,2,2,3,4,4,3]
+  func getSolution() {
+    let nodes = [1, 2, 2, 3, 4, 4, 3]
     let root = BinaryTreeHelper.buildTree(withNodes: nodes)
-    print(root!)
+    print(root ?? "")
     print(Solution().isSymmetric(root))
   }
 }
