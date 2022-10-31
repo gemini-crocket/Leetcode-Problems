@@ -4,7 +4,7 @@
 //  Source    : https://leetcode.com/problems/3sum/
 //  Category  : Array, Two Pointers, Sorting
 //
-//  Created by Thomas Heinis on .
+//  Created by Thomas Heinis on 30/10/2022.
 //  GitHub    : https://github.com/hoseiocean
 //  LinkedIn  : https://linkedin.com/in/hoseiocean
 //  E-mail    : mailto:thomas.heinis@ik.me
