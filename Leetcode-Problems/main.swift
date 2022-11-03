@@ -3,9 +3,9 @@
 //  Leetcode-Problems
 //
 //  Created by Thomas Heinis on .
-//  GitHub    : https://github.com/hoseiocean
-//  LinkedIn  : https://linkedin.com/in/hoseiocean
-//  E-mail    : mailto:thomas.heinis@ik.me
+//  GitHub   : https://github.com/hoseiocean
+//  LinkedIn : https://linkedin.com/in/hoseiocean
+//  E-mail   : mailto:thomas.heinis@ik.me
 //
 
-P740.getSolution()
+P1779.getSolution()
