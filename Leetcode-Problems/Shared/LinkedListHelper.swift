@@ -1,6 +1,6 @@
 //
 //  LinkedListHelper.swift
-//  leetcode-swift
+//  Leetcode-Problems
 //
 //  Created by Tianyu Wang on 16/6/29.
 //  GitHub   :  http://github.com/wty21cn

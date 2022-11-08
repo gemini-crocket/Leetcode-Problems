@@ -4,8 +4,9 @@
 //
 //  Created by Thomas Heinis on 23/10/2022.
 //
-// Definition for singly-linked list.
-// Provided by Leetcode
+//  Definition for singly-linked list.
+//  Provided by Leetcode
+//  Additionnal functions by Tianyu Wang
 
 public class ListNode: ListNodePrintable, CustomStringConvertible {
   public var val: Int

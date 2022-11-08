@@ -55,7 +55,7 @@ enum P101 {
     }
   }
 
-  func getSolution() {
+  static func getSolution() {
     let nodes = [1, 2, 2, 3, 4, 4, 3]
     let root = BinaryTreeHelper.buildTree(withNodes: nodes)
     print(root ?? "")
