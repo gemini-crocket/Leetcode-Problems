@@ -11,48 +11,41 @@
 // MARK: - Helper Protocol
 
 enum EnaryTreeHelper {
-  static func build(with nodesValues: [Int?] = [1]) -> Node? {
-    let nodesRelations = getNodesRelations(nodesValues)
-    return build(with: 1, in: nodesRelations)
-  }
+  static func build(with values: [Int?], at index: Int = 0) -> Node? {
+    guard let value = values[index] else { return nil }
 
-  private static func build(with nodeValue: Int? = 1, in nodesRelations: [Int: Int]) -> Node? {
-    if let nodeValue {
-      let node = Node(nodeValue)
-      let children = getChildren(of: nodeValue, in: nodesRelations)
+    let node = Node(value)
+    let childrenIndices = getChildrenIndex(of: index, in: values)
 
-      for i in 0 ..< children.count {
-        if let child = build(with: children[i], in: nodesRelations) {
-          node.children.append(child)
-        }
+    for index in childrenIndices {
+      if let child = build(with: values, at: index) {
+        node.children.append(child)
       }
-
-      return node
     }
-    return nil
+    return node
   }
 
-  private static func getChildren(of nodeValue: Int, in nodeRelations: [Int: Int]) -> [Int] {
+  private static func getChildrenIndex(of index: Int, in values: [Int?]) -> [Int] {
+    if values[index] == nil {
+      return []
+    }
+
+    let nodesCount = values.prefix(index + 1).compactMap { $0 }.count
+
     var children: [Int] = []
+    var parentsCount = 0
+    var pointer = 0
 
-    for (child, parent) in nodeRelations where parent == nodeValue && child != 0 {
-      children.append(child)
-    }
-
-    return children.sorted()
-  }
-
-  private static func getNodesRelations(_ values: [Int?]) -> [Int: Int] {
-    var nodeRelations: [Int: Int] = [:]
-    var parentValue = 0
-
-    for i in 0 ..< values.count {
-      if let value = values[i] {
-        nodeRelations[value] = parentValue
-      } else {
-        parentValue += 1
+    while pointer < values.endIndex && parentsCount <= nodesCount {
+      if values[pointer] == nil {
+        parentsCount += 1
+      } else if parentsCount == nodesCount {
+        children.append(pointer)
       }
+
+      pointer += 1
     }
-    return nodeRelations
+
+    return children
   }
 }
