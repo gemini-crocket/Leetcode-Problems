@@ -52,18 +52,18 @@ enum P232 {
     func pop() -> Int {
       if stack2.isEmpty {
         while !stack1.isEmpty {
-          stack2.append(stack1.popLast()!)
+          stack2.append(stack1.popLast() ?? -1)
         }
       }
-      return stack2.popLast()!
+      return stack2.popLast() ?? -1
     }
 
     func peek() -> Int {
       if !stack2.isEmpty {
-        return stack2.last!
+        return stack2.last ?? -1
       }
 
-      return front!
+      return front ?? -1
     }
 
     func empty() -> Bool {

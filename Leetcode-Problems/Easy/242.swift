@@ -11,15 +11,15 @@
 enum P242 {
   class Solution {
     func isAnagram(_ string1: String, _ string2: String) -> Bool {
-      let sMap = characterMap(string1)
-      let tMap = characterMap(string2)
+      let string1Map = characterMap(string1)
+      let string2Map = characterMap(string2)
 
       if string1.count != string2.count {
         return false
       }
 
-      for (index, value) in sMap {
-        if let count = tMap[index] {
+      for (index, value) in string1Map {
+        if let count = string2Map[index] {
           if count == value {
             continue
           }
