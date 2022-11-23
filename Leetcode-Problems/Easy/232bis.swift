@@ -1,5 +1,5 @@
 //
-//  232.swift - Implement Queue using Stacks
+//  232bis.swift - Implement Queue using Stacks
 //  Leetcode-Problems
 //  Source    :  https://leetcode.com/problems/implement-queue-using-stacks/
 //  Category  :  Design, Queue, Stack
@@ -9,6 +9,8 @@
 //  LinkedIn  :  https://linkedin.com/in/hoseiocean
 //  E-mail    :  mailto:thomas.heinis@ik.me
 //
+
+// The queue requested by Leetcode is offering limited use. Here is an improved one.
 
 /*
   *
@@ -31,8 +33,8 @@
   *
   */
 
-enum P232 {
-  class MyQueue<Element> {
+enum P232bis {
+  class Queue<Element> {
     private var stack1: [Element]
     private var stack2: [Element]
 
@@ -41,11 +43,11 @@ enum P232 {
       stack2 = []
     }
 
-    func push(_ element: Element) {
+    func enqueue(_ element: Element) {
       stack1.append(element)
     }
 
-    func pop() -> Element? {
+    func dequeue() -> Element? {
       if stack2.isEmpty {
         while let element = stack1.popLast() {
           stack2.append(element)
