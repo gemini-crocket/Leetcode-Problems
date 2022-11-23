@@ -11,58 +11,58 @@
 //
 
 /*
-  *
-  * Implement a first in first out (FIFO) queue using only two stacks.
-  * The implemented queue should support all the functions of a normal queue.
-  *
-  * push(x) - Push element x to the back of queue.
-  * pop() - Removes the element from in front of queue.
-  * peek() - Get the front element.
-  * empty() - Return whether the queue is empty.
-  *
-  * Notes:
-  *
-  * You must use only standard operations of a stack, which means only "push to top",
-  * "peek/pop from top", "size", and "is empty" operations are valid.
-  *
-  * Depending on your language, stack may not be supported natively. You may simulate a
-  * stack by using a list or deque (double-ended queue), as long as you use only
-  * standard operations of a stack.
-  *
-  */
+ *
+ * Implement a first in first out (FIFO) queue using only two stacks.
+ * The implemented queue should support all the functions of a normal queue.
+ *
+ * push(x) - Push element x to the back of queue.
+ * pop() - Removes the element from in front of queue.
+ * peek() - Get the front element.
+ * empty() - Return whether the queue is empty.
+ *
+ * Notes:
+ *
+ * You must use only standard operations of a stack, which means only "push to top",
+ * "peek/pop from top", "size", and "is empty" operations are valid.
+ *
+ * Depending on your language, stack may not be supported natively. You may simulate a
+ * stack by using a list or deque (double-ended queue), as long as you use only
+ * standard operations of a stack.
+ *
+ */
 
 enum P232 {
-  class MyQueue<Element> {
-    private var stack1: [Element]
-    private var stack2: [Element]
+  class MyQueue {
+    private var stack1: [Int]
+    private var stack2: [Int]
 
     init() {
       stack1 = []
       stack2 = []
     }
 
-    func push(_ element: Element) {
-      stack1.append(element)
+    func push(_ int: Int) {
+      stack1.append(int)
     }
 
-    func pop() -> Element? {
+    func pop() -> Int {
       if stack2.isEmpty {
-        while let element = stack1.popLast() {
-          stack2.append(element)
+        while let int = stack1.popLast() {
+          stack2.append(int)
         }
       }
-      return stack2.popLast()
+      return stack2.popLast()!
     }
 
-    func peek() -> Element? {
-      stack2.last ?? stack1.first
+    func peek() -> Int {
+      stack2.last ?? stack1.first ?? -1
     }
 
-    var isEmpty: Bool {
+    func empty() -> Bool {
       stack1.isEmpty && stack2.isEmpty
     }
+  }
 
-    static func getSolution() {
-    }
+  static func getSolution() {
   }
 }
