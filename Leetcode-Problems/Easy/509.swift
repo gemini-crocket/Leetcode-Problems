@@ -4,7 +4,7 @@
 //  Source    : https://leetcode.com/problems/fibonacci-number/?envType=study-plan&id=dynamic-programming-i
 //  Category  : Math, Dynamic Programming, Recursion, Memoization
 //
-//  Created by Thomas Heinis on 29/10/2022.
+//  Created by Thomas Heinis on 29/10/2022, last updated on 24/11/2022.
 //  GitHub    :  https://github.com/hoseiocean
 //  LinkedIn  :  https://linkedin.com/in/hoseiocean
 //  E-mail    :  mailto:thomas.heinis@ik.me
@@ -27,15 +27,22 @@
 
 enum P509 {
   class Solution {
-    func fib(_ number: Int) -> Int {
-      guard number >= 2 && number <= 30 else { return number }
+    private var memory: [Int: Int] = [0: 0, 1: 1]
 
-      return fib(number - 1) + fib(number - 2)
+    func fib(_ number: Int) -> Int {
+      memory[number] ?? {
+        memory[number - 1] = fib(number - 1)
+        if let num1 = memory[number - 1], let num2 = memory[number - 2] {
+          return num1 + num2
+        }
+
+        return number
+      }()
     }
   }
 
   static func getSolution() {
-    let number = 4
+    let number = 30
     print(Solution().fib(number))
   }
 }

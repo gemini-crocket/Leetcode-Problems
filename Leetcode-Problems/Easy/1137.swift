@@ -4,7 +4,7 @@
 //  Source    : https://leetcode.com/problems/n-th-tribonacci-number/
 //  Category  : Math, Dynamic Programming, Memoization
 //
-//  Created by Thomas Heinis on 29/10/2022.
+//  Created by Thomas Heinis on 29/10/2022, last updated on 24/11/2022.
 //  GitHub    :  https://github.com/hoseiocean
 //  LinkedIn  :  https://linkedin.com/in/hoseiocean
 //  E-mail    :  mailto:thomas.heinis@ik.me
@@ -25,22 +25,18 @@
   */
 
 enum P1137 {
-  class Tribonacci {
-    private var number = 38
-    var values: [Int] = [0, 1, 1]
-
-    init() {
-      for i in 3 ... number {
-        values.append(values[i - 3] + values[i - 2] + values[i - 1])
-      }
-    }
-  }
-
   class Solution {
-    var tribonacci = Tribonacci()
+    private var map: [Int: Int] = [0: 0, 1: 1, 2: 1]
 
     func tribonacci(_ number: Int) -> Int {
-      return tribonacci.values[number]
+      map[number] ?? {
+        map[number - 1] = tribonacci(number - 1)
+        if let num1 = map[number - 1], let num2 = map[number - 2], let num3 = map[number - 3] {
+          return num1 + num2 + num3
+        }
+
+        return number
+      }()
     }
   }
 
