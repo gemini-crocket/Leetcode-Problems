@@ -4,7 +4,7 @@
 //  Source    : https://leetcode.com/problems/house-robber/
 //  Category  : Array, Dynamic Programming
 //
-//  Created by Thomas Heinis on 31/10/2022.
+//  Created by Thomas Heinis on 31/10/2022, last updated on 26/11/2022.
 //  GitHub    : https://github.com/hoseiocean
 //  LinkedIn  : https://linkedin.com/in/hoseiocean
 //  E-mail    : mailto:thomas.heinis@ik.me
@@ -46,10 +46,8 @@ enum P198 {
         return 0
       }
 
-      var robNext: Int, robNextPlusOne: Int
-
-      robNextPlusOne = 0
-      robNext = nums[numsCount - 1]
+      var robNextPlusOne = 0
+      var robNext = nums[numsCount - 1]
 
       for i in stride(from: numsCount - 2, to: -1, by: -1) {
         let current = max(robNext, robNextPlusOne + nums[i])

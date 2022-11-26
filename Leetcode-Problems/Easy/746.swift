@@ -10,34 +10,24 @@
 //  E-mail    : mailto:thomas.heinis@ik.me
 //
 
-/*
- 
-  You are given an integer array cost where cost[i] is the cost of ith step
+/* You are given an integer array cost where cost[i] is the cost of ith step
   on a staircase. Once you pay the cost, you can either climb one or two steps.
   You can either start from the step with index 0, or the step with index 1.
   Return the minimum cost to reach the top of the floor.
- 
   */
 
 enum P746 {
   class Solution {
     func minCostClimbingStairs(_ costs: [Int]) -> Int {
-      guard !costs.isEmpty else { return 0 }
-      guard costs.count > 2 else { return costs.min() ?? 0 }
+      var downOne = 0, downTwo = 0
 
-      var first = 0
-      var second = 0
-
-      for i in 2 ..< costs.count {
-        let temp = min(first + costs[i - 2], second + costs[i - 1])
-        first = second
-        second = temp
+      for i in 2 ... costs.count {
+        let temp = downOne
+        downOne = min(downOne + costs[i - 1], downTwo + costs[i - 2])
+        downTwo = temp
       }
 
-      let count = costs.count
-      let result = min(first + costs[count - 2], second + costs[count - 1])
-
-      return result
+      return downOne
     }
   }
 
