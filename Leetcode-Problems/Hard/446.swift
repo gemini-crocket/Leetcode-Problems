@@ -1,7 +1,7 @@
 //
-//  446.swift -
+//  446.swift - Arithmetic Slices II - Subsequence
 //  Leetcode-Problems
-//  Source   : Arithmetic Slices II - Subsequence
+//  Source   : https://leetcode.com/problems/arithmetic-slices-ii-subsequence/
 //  Category : Array, Dynamic Programming
 //
 //  Created by Thomas Heinis on 27/11/2022.
