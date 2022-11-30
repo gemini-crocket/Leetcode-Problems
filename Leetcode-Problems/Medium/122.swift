@@ -1,8 +1,8 @@
 //
-//  122.swift -
+//  122.swift - Best Time to Buy and Sell Stock II
 //  Leetcode-Problems
-//  Source   :
-//  Category :
+//  Source   : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+//  Category : Array, Dynamic Programming, Greedy
 //
 //  Created by Thomas Heinis on 30/11/2022.
 //  GitHub   : https://github.com/hoseiocean
