@@ -8,4 +8,4 @@
 //  E-mail   : mailto:thomas.heinis@ik.me
 //
 
-P1567.getSolution()
+P122.getSolution()
