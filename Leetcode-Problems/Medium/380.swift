@@ -13,7 +13,7 @@
 enum P380 {
   class RandomizedSet {
     private var map: [Int: Int]
-    private var intArray : [Int]
+    private var intArray: [Int]
 
     init() {
       map = [:]
