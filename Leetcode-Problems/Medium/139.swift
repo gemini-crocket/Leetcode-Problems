@@ -1,10 +1,10 @@
 //
 //  139.swift - Word Break
 //  Leetcode-Problems
-//  Source   :
-//  Category :
+//  Source   : https://leetcode.com/problems/word-break/
+//  Category : Hash Table, String, Dynamic Programming, Trie, Memorization
 //
-//  Created by Thomas Heinis on .
+//  Created by Thomas Heinis on 02/12/2022.
 //  GitHub   : https://github.com/hoseiocean
 //  LinkedIn : https://linkedin.com/in/hoseiocean
 //  E-mail   : mailto:thomas.heinis@ik.me
